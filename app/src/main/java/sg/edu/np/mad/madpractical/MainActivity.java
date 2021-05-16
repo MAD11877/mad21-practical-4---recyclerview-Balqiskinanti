@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         descTxt.setText(user.getDescription());
     }
     private void onFollowClick(){
-        Button followBtn = findViewById(R.id.follow);
+        Button followBtn = findViewById(R.id.btnFollow);
         followBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

@@ -1,17 +1,12 @@
 package sg.edu.np.mad.madpractical;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -47,7 +42,7 @@ public class ListActivity extends AppCompatActivity {
         return userArray;
     }
     private void initRecyclerView(){
-        RecyclerView listRecyclerView = findViewById(R.id.list_recycler);
+        RecyclerView listRecyclerView = findViewById(R.id.rv);
         ListAdapter listAdapter = new ListAdapter(ListActivity.this,userArray);
 
         LinearLayoutManager listLayoutManager = new LinearLayoutManager(this);

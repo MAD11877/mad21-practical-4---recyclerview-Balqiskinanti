@@ -14,6 +14,6 @@ public class ListViewHolder extends RecyclerView.ViewHolder{
         super(itemView);
         descTxt = itemView.findViewById(R.id.description_recycler);
         nameTxt = itemView.findViewById(R.id.name_recycler);
-        profilePicImg = itemView.findViewById(R.id.profile_pic_recycler);
+        profilePicImg = itemView.findViewById(R.id.img_profile);
     }
 }
