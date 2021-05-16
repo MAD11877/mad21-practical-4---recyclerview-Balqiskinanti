@@ -14,11 +14,13 @@ public class MainActivity extends AppCompatActivity {
     private final static String TAG = "Main Activity";
     User user;
     TextView nameTxt;
+    Button followBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initUser();
+        setButton();
         onFollowClick();
         Log.v(TAG, "Create");
     }
@@ -36,8 +38,19 @@ public class MainActivity extends AppCompatActivity {
         nameTxt.setText(user.getName());
         descTxt.setText(user.getDescription());
     }
+    private void setButton(){
+        Log.v(TAG, user.getName());
+        Log.v(TAG, String.valueOf(user.isFollowed()));
+        followBtn = findViewById(R.id.btnFollow);
+        if(user.isFollowed()){
+            followBtn.setText("Unfollow");
+        }
+        else{
+            followBtn.setText("Follow");
+        }
+    }
     private void onFollowClick(){
-        Button followBtn = findViewById(R.id.btnFollow);
+        followBtn = findViewById(R.id.btnFollow);
         followBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
